@@ -167,20 +167,42 @@
 
     # inp = raw_input()
 
-print "Problem 9: Calculate number in series."
-number = int(raw_input("Input number:"))
-if number < 0:
-    print "Number is negative, sorry!"
-else:
-    a=0
-    for i in range(number+1):
-        if i == 0:
-            a= 1
-        else:
-            a=(2*a)+1
-    print "a in series is : " + str(a)
+# print "Problem 9: Calculate number in series."
+# number = int(raw_input("Input number:"))
+# if number < 0:
+#     print "Number is negative, sorry!"
+# else:
+#     a=0
+#     for i in range(number+1):
+#         if i == 0:
+#             a= 1
+#         else:
+#             a=(2*a)+1
+#     print "a in series is : " + str(a)
 
 
  # ----------------------------------solve equation
     # (a + (b - c) * d - e) * f = 75`
 #where a, b, c, d, e, and f are unique integers in the range [1, 6]
+
+for a in range(1,7):
+    for b in range(1,7):
+        if b!=a:
+            for c in range(1,7):
+                if (c!=b and c!=a):
+                    for d in range(1,7):
+                        if (d!=c and d!=b and d!=a):
+                            for e in range(1,7):
+                                if (e!=d and e!=c and e!=b and e!=a):
+                                    for f in range(1,7):
+                                        if (f!=e and f!=d and f!=c and f!=b and f!=a):
+                                            #print a,b,c,d,e,f
+                                            if (((a + ((b-c) * d) - e) * f)  == 75):
+
+                                                print "a = " + str(a)
+                                                print "b = " + str(b)
+                                                print "c = " + str(c)
+                                                print "d = " + str(d)
+                                                print "e = " + str(e)
+                                                print "f = " + str(f)
+                                                print "------------"
